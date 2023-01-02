@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Overpass+Mono&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <!-- styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+<body>
+    <div class="rating-container"> <!-- Don't hide this shit its the fucking container  -->
+
+      <div class="rating-state ">
+        <!-- Rating state start -->
+        <img class="icon" src="./images/icon-star.svg" alt="icon-star">
+        <h1 class="heading ">How did we do?</h1>
+        <p class="sub-heading ">Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+        <div class="rating-numbers">
+          <input type="radio" name="rate" id="one" value="1" > 
+          <label class="rating-label "  for="one">1</label>
+          <input  type="radio" name="rate" id="two" value="2">
+          <label class="rating-label "  for="two">2</label>
+          <input type="radio" name="rate" id="three" value="3">
+          <label class="rating-label "  for="three">3</label>
+          <input type="radio" name="rate" id="four" value="4">
+          <label class="rating-label "  for="four">4</label>
+          <input type="radio" name="rate" id="five" value="5"> 
+          <label class="rating-label" for="five">5</label>
+        </div>
+        <p class="alert hide">please select a number</p>
+        <div class="btn">Submit</div>
+    </div>
+    <!-- Rating state end -->
+
+    <div class="thank-you-state hide">
+    <!-- Thank you state start -->
+    
+      <img class="thank-you-img" src="./images/illustration-thank-you.svg" alt="thank you icon">
+      <p class="rated">You selected <span class="rating-value">5</span> out of 5</p>
+      <h1 class="heading thank-you-heading">Thank you!</h1>
+      <p class="sub-heading thank-you-sub-heading">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don't hesitate to get in touch!</p>
+    </div>
+    <!-- Thank you state end -->
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

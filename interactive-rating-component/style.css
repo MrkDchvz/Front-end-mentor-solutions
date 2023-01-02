@@ -1,0 +1,194 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+/*------------------*/
+/*-------root------*/
+/*------------------*/
+
+:root {
+    /* colors */
+    --clr-orange: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey:hsl(217, 12%, 63%);
+    --clr-medium-grey:hsl(210, 19%, 18%);
+    --clr-dark-blue: hsl(215, 23%, 14%);
+    --clr-very-dark-blue: hsl(216, 12%, 8%);
+
+
+    /* font-family */
+    --ff-overpass: 'Overpass', sans-serif;
+    -ff-overpass-mono: 'Overpass Mono', monospace;
+}
+
+
+
+/*------------------*/
+/*-utlility classes-*/
+/*------------------*/
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/*----------------*/
+/*-----layout-----*/
+/*----------------*/
+
+body {
+    height: 100vh;
+    background: var(--clr-very-dark-blue);
+    color: var(--clr-white);
+    font-family: var(--ff-overpass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.rating-container {
+    width: 21.125rem;
+    background: var(--clr-dark-blue);
+    padding: 1.2rem;
+    border-radius: 30px;
+}
+
+@media screen and (min-width: 476px) {
+    .rating-container {
+        width: 28.125rem;
+        padding: 2.4rem;
+    }
+}
+
+.icon {
+    padding: 1rem;
+    background-color: var(--clr-medium-grey);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.heading {
+    font-size: 1.6rem;
+    margin-bottom: .7rem;
+}
+
+.sub-heading {
+    font-size: .96rem;
+    line-height: 1.6rem;
+    color: var(--clr-light-grey);
+    margin-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 476px) {
+    .heading {
+        font-size: 1.9rem;
+    }
+
+    .sub-heading {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Rating */
+
+
+.rating-numbers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-numbers input {
+    display: none;
+}
+
+.rating-numbers label {
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 700;
+    color: var(--clr-light-grey);
+    padding: 1rem 1.3rem;
+    font-size: 1rem;
+    background: var(--clr-medium-grey);
+    border-radius: 50%;
+    margin-bottom: 1.7rem;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+
+
+.rating-numbers label:hover {
+    background-color: var(--clr-light-grey);
+    color: var(--clr-white);
+}
+
+.rating-numbers input:checked + label {
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+}
+
+/* required field */
+
+.alert {
+    margin-bottom: .4rem;
+}
+/* btn */
+
+.btn {
+    background-color: var(--clr-orange);
+    padding: .9rem 1rem;
+    border-radius: 30px;
+    text-align: center;
+    font-family: var(--ff-overpass);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+}
+
+
+/* Thankyou */
+
+.thank-you-state {
+    text-align: center;
+}
+
+.thank-you-img {
+    margin: 2rem 0;
+}
+
+.rated {
+    background-color: var(--clr-medium-grey);
+    color: var(--clr-orange);
+    padding: .4rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
