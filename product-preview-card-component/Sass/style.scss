@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/*Colors*/
+
+// Primary
+$dark-cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+/* Font-family */
+
+$ff-montserrat: 'Montserrat', sans-serif;
+$ff-fraunces: 'Fraunces', serif;
+
+/* Font-weight */
+$fw-500: 500;
+$fw-700: 700; 
+
+/* Font-size */ 
+$fs-p: 14px;
+
+/* Layout 
+-------------------------------------*/
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $cream;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+}
+
+.card__price-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.card__button {
+  background-color: $dark-cyan;
+}
+
+
+
+/* Box model
+------------------------------------*/
+.card-container {
+  max-width: 335px;
+}
+
+.wrapper {
+  height: 100vh;
+} 
+
+.card__image--mobile {
+  border-radius: 10px 10px 0 0px;
+}
+
+.card__image--desktop,
+.card__image--mobile {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card__image--desktop {
+  display: none;
+}
+
+.card-content {
+  padding: 1rem 1.5rem;
+}
+
+.card__tagline {
+  margin: .5rem 0;
+}
+
+.card__description {
+  margin: .9rem 0;
+}
+
+.card__price-container {
+  margin-bottom: .6rem;
+}
+
+.card__price {
+  margin-top: .3rem;
+}
+
+.card__button {
+  width: 100%;
+  padding: .8rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* Typography
+------------------------------------*/
+.card__tagline,
+.card__description,
+.card__price {
+  font-family: $ff-montserrat;
+  color: $dark-grayish-blue;
+}
+
+.card__tagline,
+.card__description {
+  font-size: $fs-p;
+}
+
+.card__tagline {
+  font-family: $ff-montserrat;
+
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+.card__title {
+  font-family: $ff-fraunces;
+  font-size: 1.7rem;
+  font-weight: $fw-700;
+  
+
+  color: $very-dark-blue;
+}
+
+.card__description {
+  line-height: 1.3rem;
+}
+
+.card__sale {
+  font-family: $ff-fraunces;
+  font-weight: $fw-700;
+
+  color: $dark-cyan;
+}
+
+.card__price {
+  text-decoration: line-through;
+  font-size: .3rem;
+}
+
+.card__button {
+  font-family: $ff-montserrat;
+  color: $white;
+
+  .card__button-title {
+    margin-left: .4rem;
+  }
+}
+
+/*--------------------------------------------- 
+------------------Desktop----------------------
+-----------------------------------------------
+*/
+
+@media (min-width: 1440px) {
+
+  /* Layout 
+  -------------------------------------*/
+  .card__image--mobile {
+    display: none;
+  }
+
+  .card__image--desktop {
+    display: block;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+
+  .card-content,
+  .card__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .card__price-container {
+    align-items: center;
+  }
+
+  /* Box model
+  -------------------------------------*/
+  .card-container {
+    max-width: 700px;
+  }
+
+  .card__image-container {
+    max-width: 50%;
+
+    .card__image--desktop {
+      border-radius: 10px 0 0 10px;
+    }
+  }
+
+  .card-content {
+    max-width: 50%;
+
+    padding: 2rem;
+    border-radius: 0 10px 10px 0;
+
+    .card__description {
+      margin: 0;
+    }
+  }
+  
+  .card__button {
+    padding: 1.2rem 0;
+    border-radius: 10px;
+  }
+
+  /* Typography
+  ------------------------------------*/
+  .card__title {
+    font-size: 2.4rem;
+  }
+
+  .card__description {
+    font-size: 1.05rem;
+
+    line-height: 1.7rem;
+  }
+
+  .card__sale {
+    font-size: 2.4rem;
+  }
+
+  .card__price {
+    font-size: 1.2rem;
+  }
+
+}
