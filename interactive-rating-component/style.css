@@ -61,6 +61,7 @@ body {
     color: var(--clr-white);
     font-family: var(--ff-overpass);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     
