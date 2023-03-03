@@ -1,0 +1,111 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- White: hsl(0, 0%, 100%)
+- Light gray: hsl(212, 45%, 89%)
+- Grayish blue: hsl(220, 15%, 55%)
+- Dark blue: hsl(218, 44%, 22%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 700
+ */
+
+/* Variables
+----------------*/
+:root {
+  /* colors */
+  --clr_white: hsl(0, 0%, 100%);
+  --clr_light-gray: hsl(212, 45%, 89%);
+  --clr_greyish-blue: hsl(220, 15%, 55%);
+  --clr_Dark-blue: hsl(218, 44%, 22%);
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--clr_light-gray);
+
+}
+
+.wrapper {
+  background-color: var(--clr_white);
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.description {
+  text-align: center;
+}
+
+h1 {
+  color: var(--clr_Dark-blue);
+  margin: 1rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+p {
+  color: var(--clr_greyish-blue);
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.qrcode {
+  text-align: center;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.attribution {
+  margin: 1rem;
+}
+
