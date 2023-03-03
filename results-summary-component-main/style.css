@@ -1,0 +1,285 @@
+
+
+/* Table Of Contents
+1. CSS RESET
+2. VARIABLES
+3. TYPOGRAPHY
+4. MISC
+5. LAYOUT
+ */
+
+
+
+
+/*1. CSS Reset
+------------------*/
+/* From: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/*2. Variables 
+-------------------*/
+:root {
+  /*----Colors----*/
+  /* Primary */
+  --clr_light-red: hsl(0, 100%, 67%);
+  --clr_orange-yellow: hsl(39, 100%, 56%);
+  --clr_green-teal: hsl(166, 100%, 37%);
+  --clr_cobalt-blue: hsl(234, 85%, 45%);
+
+
+  /* Gradients */
+  --clr_light-slate-blue: hsl(252, 100%, 67%);
+  --clr_light-royal-blue: hsl(241, 81%, 54%);
+    
+  /* Gradient (FOR CIRLE)*/
+  --clr_violet-blue: hsla(256, 72%, 46%, 1);
+  --clr_persian-blue: hsla(241, 72%, 46%, 0);
+
+  /*Neutral*/
+  --clr_white: hsl(0, 0%, 100%);
+  --clr_pale-blue: hsl(221, 100%, 96%);
+  --clr_light-lavender: hsl(241, 100%, 89%);
+  --clr_dark-green-blue: hsl(224, 30%, 27%);
+
+  /*----Typography----*/
+  /* Font Style */
+  --fs-primary: 'Hanken Grotesk', sans-serif;
+}
+
+/*3. Typography 
+------------------*/
+.main,
+.summary {
+  font-family: var(--fs-primary);
+}
+
+/* Main */
+
+.main {
+  text-align: center;
+  color: var(--clr_white);
+}
+
+.main__header,
+.feedback {
+  color: var(--clr_light-lavender);
+}
+/* Circle */
+.user-percentage {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.total-percentage {
+  font-size: .7rem;
+  color: var(--clr_pale-blue);
+  opacity: .6;
+}
+
+.rating {
+  font-size: 1.4rem;
+}
+
+/* Summary */
+.summary {
+  color: var( --clr_dark-green-blue);
+}
+
+.summary__title,
+.card {
+  font-size: 1.2rem;
+}
+
+
+
+.card__title--reaction { color: var(--clr_light-red);}
+.card__title--memory   { color: var(--clr_orange-yellow);}
+.card__title--verbal   { color: var(--clr_green-teal);}
+.card__title--visual   { color: var(--clr_cobalt-blue);}
+
+
+.card__percent {
+  font-weight: 700;
+  color:var(--clr_light-lavender) ;
+}
+
+.card__percent__user {
+  color: var(--clr_dark-green-blue)
+}
+
+.btn {
+  font-weight: 700;
+  color: var(--clr_white);
+}
+
+
+
+/*4. Misc
+------------ */
+.main {
+  background-image: linear-gradient(var(--clr_light-slate-blue), var(--clr_light-royal-blue));
+}
+
+.percentage-circle {
+  background-image:linear-gradient(var(--clr_violet-blue) , var(--clr_persian-blue)); ;
+}
+
+.card--reaction::before {background-color: var(--clr_light-red);}
+.card--memory::before {background-color: var(--clr_orange-yellow);}
+.card--verbal::before {background-color: var(--clr_green-teal);}
+.card--visual::before {background-color: var(--clr_cobalt-blue);}
+
+.btn {
+  background-color: var(--clr_dark-green-blue);
+}
+
+/*5. Layout
+-------------*/
+.main {
+  /* display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Padding */
+  padding: 1.3rem 2rem;
+  /* border */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.percentage-circle {
+  margin: 1.5rem 0rem;
+
+  padding: 1rem 1.8rem;
+  border-radius: 100%;
+}
+
+.rating {
+  margin: .3rem 0;
+}
+
+.summary {
+  padding: 1.3rem;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  margin: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 1rem;
+}
+
+/* For Background Opacity */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: .04;
+  border-radius: 10px;
+}
+
+
+.card__title,
+.card__icon,
+.card__percent {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.card__icon {
+  margin-right: 10px ;
+}
+
+.btn {
+  display: block;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+}
+
+.attribution {
+  margin: 2rem;
+}
+
+
+/*============================*/
+/*----------DESKTOP----------*/
+/*============================*/
+
+
+@media (min-width: 1440px) {
+
+  /* Typography */
+  .main__header {
+    font-size: 1.6rem;
+  }
+  .rating {
+    font-size: 2rem;
+  }
+  .user-percentage {
+    font-size: 4rem;
+  }
+
+  /* Layout */
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    display: flex;
+  }
+
+  .main {
+    width: 40%;
+    border-radius:30px ;
+    padding: 5rem 3rem;
+  }
+
+  .percentage-circle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 170px;
+    height: 170px;
+  }
+
+  .summary {
+    width: 45%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+
