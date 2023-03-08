@@ -1,0 +1,238 @@
+/* RESET
+----------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* VARIABLES
+---------------------- */
+
+:root {
+  /* primary */
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+}
+
+/* GLOBAL
+----------------------- */
+body {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Box Sizing */
+  min-height: 100vh;
+  /* Typography */
+  font-family: 'Red Hat Display', sans-serif;
+  color: var(--clr-dark-blue);
+  /* Misc */
+  background-color: var(--clr-pale-blue);
+}
+
+.background {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background--desktop {
+  display: none;
+}
+
+
+/* LAYOUT 
+-------------------------*/
+/*---General---*/
+.card {
+  /* Box Sizing */
+  max-width: 390px;
+  margin: 0 3rem;
+  /* Misc */
+  background-color: var(--clr-very-pale-blue);
+  border-radius: 20px;
+
+  box-shadow: 0 10px 10px -15px var(--clr-desaturated-blue);
+}
+
+.order {  
+  /* Box Sizing */
+  padding: 2rem 1rem;
+}
+.order > * {
+  /* Box Sizing */
+  margin-bottom: 1.2rem;
+}
+
+/*---Image---*/
+
+.card__img {
+  /* Box Sizing */
+  max-width: 100%;
+  /* Misc */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/*---Order Summary---*/
+.order__title,
+.order__description {
+  /* Typography */
+  text-align: center;
+}
+.order__title {
+  /* Typography */
+  font-weight: 900;
+}
+
+.order__description {
+  /* Box Sizing */
+  padding: 0 .5rem;
+  /* Typography */
+  color: var(--clr-desaturated-blue);
+  font-size: .9rem
+}
+
+
+/*---Order Plan---*/
+.plan {
+  /* Display */
+  display: flex;
+  align-items: center;
+  /* Box Sizing */
+  padding: 0.5rem;
+  /* Misc */
+  background-color: var(--clr-very-pale-blue);
+}
+
+.plan__name {
+  font-size: .8rem;
+}
+
+.plan__price {
+  /* Typography */
+  font-size: .2rem;
+  color: var(--clr-desaturated-blue);
+}
+
+.plan__link {
+  /* Display */
+  display: block;
+  /* Box Sizing */
+  margin-left: auto;
+  /* Typography */
+  font-size: .7rem;
+  font-weight: 900;
+
+
+}
+
+.plan__icon {
+  /* Display */
+  display: block;
+  /* Box Sizing */
+  margin-right: 1rem;
+}
+
+/*--Order Buttons---*/
+
+.order__btn {
+  /* Display */
+  display: block;
+  /* Block Sizing */
+  width: 100%;
+  margin: auto;
+  padding: .8rem 0rem;
+  /* Typography */
+  font-weight: 900;
+  /* Misc */
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.order__btn--payment {
+  /* Typography */
+  color: var(--clr-very-pale-blue);
+  /* Box-sizing */
+  margin-bottom: .5rem;
+  /* Misc */
+  border-radius: 10px;
+  background-color: var(--clr-bright-blue);
+  box-shadow: 0 16px 15px -15px var(--clr-desaturated-blue);
+
+}
+
+.order__btn--cancel {
+  /* Typography */
+  color: var(--clr-desaturated-blue);
+  /* Misc */
+  background-color: inherit;
+}
+
+/*---Hover States---*/
+.order__btn--payment:hover {
+  opacity: .5;
+  transition: all .3s ease-in-out;
+}
+
+.order__btn--cancel:hover {
+  color: var(--clr-dark-blue);
+}
+
+/*=============================================*/
+/*==================DESKTOP====================*/
+/*=============================================*/
+
+@media (min-width: 90rem) {
+/* Global
+-------------------------- */
+.background--desktop {
+  display: block;
+}
+.background--mobile {
+  display: none;
+}
+
+
+  /* Layout 
+----------------------------*/
+  .order   {
+    padding: 2rem;
+  }
+  .order__description {
+    font-size: 1rem;
+  }
+  .plan {
+    padding: 1rem 2rem;
+  }
+  .plan__name,
+  .plan__price {
+    font-size: 1rem;
+  }
+
+}
