@@ -114,7 +114,7 @@ body {
   padding: 0 .5rem;
   /* Typography */
   color: var(--clr-desaturated-blue);
-  font-size: .9rem
+  font-size: 1rem
 }
 
 
@@ -130,12 +130,12 @@ body {
 }
 
 .plan__name {
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .plan__price {
   /* Typography */
-  font-size: .2rem;
+  font-size: 1rem;
   color: var(--clr-desaturated-blue);
 }
 
@@ -145,7 +145,6 @@ body {
   /* Box Sizing */
   margin-left: auto;
   /* Typography */
-  font-size: .7rem;
   font-weight: 900;
 
 
@@ -168,7 +167,9 @@ body {
   margin: auto;
   padding: .8rem 0rem;
   /* Typography */
+  text-align: center;
   font-weight: 900;
+  text-decoration: none;
   /* Misc */
   outline: none;
   border: none;
