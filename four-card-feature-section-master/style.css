@@ -1,0 +1,117 @@
+
+/* RESET
+--------------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* VARIABLES
+-------------------------- */
+:root {
+  /*--Colors---*/
+    /*Primary*/
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+    /*Neutral*/
+    --clr-very-dark-blue: hsl(234, 12%, 34%);
+    --clr-grayish-blue: hsl(229, 5%, 34%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* GLOBAL
+------------------------- */
+body {
+  /* Typography */
+  font-family: 'Poppins', sans-serif;
+  /* Misc */
+  background-color: var(--clr-very-light-gray);
+}
+
+.wrapper {
+  /* Box Model */
+  padding: 4rem 2rem;
+}
+
+/* LAYOUT
+------------------------*/
+.title {
+  /* Typography */
+  color: var(--clr-very-dark-blue);
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.accent {
+  /* Typography */
+  font-weight: 600;
+}
+
+.description {
+  /* Box Model */
+  margin-top: 1rem;
+  /* Typography */
+  text-align: center;
+  color: var(--clr-grayish-blue);
+}
+
+.card-container {
+  /* Box Model */
+  margin-top: 4rem;
+}
+
+.card {
+  /* Box Model */
+  margin-bottom: 1rem ;
+  min-height: 260px;
+  padding: 1.7rem 1rem;
+  border-top: 5px solid;
+  /* Misc */
+  background-color: white;
+  box-shadow: 0px 5px 20px 5px  rgba(92, 91, 91, 0.164);
+  border-radius: 5px;
+}
+
+.card__img {
+  /* Display */
+  display: block;
+  /* Box Model */
+  margin-left: auto;
+  margin-top: 2.4rem;
+}
+
+.card__header {
+  /* Typography */
+  color: var(--clr-very-dark-blue);
+}
+
+.card__description {
+  /* Box Model */
+  margin-top: .5rem;
+  /* Typography */
+  color: var(--clr-grayish-blue);
+}
+
+.card--supervisor {border-color: var(--clr-cyan);}
+.card--team-builder {border-color: var(--clr-red) ;}
+.card--karma {border-color: var(--clr-orange);}
+.card--calculator {border-color: var(--clr-blue);}
