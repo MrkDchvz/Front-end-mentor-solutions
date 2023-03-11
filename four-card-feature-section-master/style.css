@@ -81,13 +81,14 @@ body {
 
 .card {
   /* Box Model */
-  margin-bottom: 1rem ;
   min-height: 260px;
-  padding: 1.7rem 1rem;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  padding: 1.5rem 2rem;
   border-top: 5px solid;
   /* Misc */
   background-color: white;
-  box-shadow: 0px 5px 20px 5px  rgba(92, 91, 91, 0.164);
+  box-shadow: 0px 5px 20px 5px  rgba(75, 74, 74, 0.164);
   border-radius: 5px;
 }
 
@@ -112,6 +113,28 @@ body {
 }
 
 .card--supervisor {border-color: var(--clr-cyan);}
-.card--team-builder {border-color: var(--clr-red) ;}
+.card--team-builder {border-color: var(--clr-red);}
 .card--karma {border-color: var(--clr-orange);}
 .card--calculator {border-color: var(--clr-blue);}
+
+/*==========================================================*/
+/*=========================DESKTOP==========================*/
+/*==========================================================*/
+
+@media (min-width: 90rem) {
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .card--team-builder {
+    margin-bottom: 2rem;
+  }
+
+  .header {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
