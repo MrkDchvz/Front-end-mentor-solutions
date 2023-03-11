@@ -134,7 +134,14 @@ body {
   }
 
   .header {
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 1.3rem;
   }
 }
