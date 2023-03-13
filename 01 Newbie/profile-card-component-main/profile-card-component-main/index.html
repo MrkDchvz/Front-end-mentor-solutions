@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 1rem; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="user">
+    <img src="./images/bg-pattern-card.svg" alt="bubble pattern">
+    <img class="user__profile"  src="./images/image-victor.jpg"  alt="an african american with white t shirt and grey jacket looking at the camera">
+    <article class="user__information">      
+      <h1 class="user__name">Victor Crest<span class="user__age">26</span></h1>
+      <p class="user__city">London</p>
+    </article>
+    <dl class="user__engagement">
+      <div class="container">
+        <dt class="user__social user__social--followers">Followers</dt>
+        <dd class="user__count user__count--followers">80K</dd>
+      </div>
+      <div class="container">
+        <dt class="user__social user__social--likes">Likes</dt>
+        <dd class="user__count user__count--likes">803K</dd>
+      </div>
+      <div class="container">
+        <dt class="user__social user__social--photos">Photos</dt>
+        <dd class="user__count user__count--photos">1.4K</dd>
+      </div>
+    </dl>  
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ/hub target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Markufu</a>.
+  </footer>
+</body>
+</html>

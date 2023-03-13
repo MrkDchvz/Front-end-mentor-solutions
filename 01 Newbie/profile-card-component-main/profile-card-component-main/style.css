@@ -1,0 +1,167 @@
+/* RESET 
+----------------------------- */
+/* Box Sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove Default Margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Fluid image styles */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* VARIABLES
+--------------------------- */
+:root {
+  /* ---Color--- */
+  /* Primary */
+  --clr-dark-cyan: hsl(185, 75%, 39%);
+  --clr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+  /* Neutral */
+  --clr-dark-gray: hsl(0, 0%, 31%, 1);
+  --clr-light-gray: hsl(0, 3%, 80%);
+
+
+}
+
+/* GLOBAL
+-------------------------- */
+body {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* Position */
+  position: relative;
+  /* Box Model */
+  min-height: 100vh;
+  /* Typography */
+  color: var(--clr-very-dark-desaturated-blue);
+  font-family: 'Kumbh Sans', sans-serif;
+  /* Misc */
+  background-color: var(--clr-dark-cyan);
+  background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 48vw bottom 45vh, left 45vw top 50vh;
+
+
+}
+
+/* LAYOUT
+---------------------------- */
+
+.user {
+  /* Position */
+  position: relative;
+  /* Box Model */
+  max-width: 320px;
+  /* Misc */
+  background-color: white;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.user__profile {
+  /* Position */
+  position: absolute;
+  left: 50%;
+  top: 21.5%;
+  transform: translateX(-50%);
+  /* Misc */
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+
+/*---User information---*/
+
+.user__information {
+  /* Position */
+  position: relative;
+  /* Box Model */
+  padding: 0 1rem;
+  padding-top: 4.3rem;
+  padding-bottom: 2rem;
+}
+
+.user__name,
+.user__city {
+  /* Typography */
+  text-align: center;
+}
+
+.user__name {
+  /* Box Model */
+  margin-bottom: .7rem;
+  /* Typography */
+  font-size: 1.2rem;
+}
+
+.user__age {
+  /* Box Model */
+  margin-left: .4rem;
+  /* Typography */
+  font-weight: 300;
+}
+
+.user__city {
+  /* Typography */
+  font-weight: 300;
+}
+
+
+/*---User Enagement---*/
+
+.user__engagement {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  /* Box Sizing */
+  padding: 1.5rem;
+  border-top: .5px solid var(--clr-light-gray);
+  /* Typography */
+  text-align: center;
+}
+
+.container {
+  /* Display */
+  display: flex;
+  flex-flow: column;
+}
+
+.user__social {
+  /* Display */
+  order: 2;
+  /* Typography */
+  font-weight: 300;
+  color: var(--clr-dark-gray);
+}
+
+.user__count {
+  /* Display */
+  order: 1;
+  /* Typography */
+  font-weight: 600;
+}
+
+
