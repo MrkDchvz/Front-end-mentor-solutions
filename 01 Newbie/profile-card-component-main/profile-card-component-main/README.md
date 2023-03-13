@@ -34,7 +34,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ### Links
 
 - Solution URL: [Github](https://github.com/MrkDchvz/Front-end-mentor-solutions/tree/master/01%20Newbie/profile-card-component-main/profile-card-component-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://magenta-flan-d1bc4e.netlify.app)
 
 ## My process
 
